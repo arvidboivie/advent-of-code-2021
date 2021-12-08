@@ -7,4 +7,5 @@ type Solution struct {
 
 var SolutionMap = map[string]Solution{
 	"1": solution1,
+	"2": solution2,
 }

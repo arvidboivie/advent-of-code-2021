@@ -5,22 +5,22 @@ import (
 )
 
 var solution1 = Solution{
-	PartOne: partOne,
-	PartTwo: partTwo,
+	PartOne: solution1PartOne,
+	PartTwo: solution1PartTwo,
 }
 
-func partOne() {
-	fmt.Println("Advent of Code 1 - Part One")
+func solution1PartOne() {
+	fmt.Println("Day 1 - Part One")
 
-	input := getInput("1")
+	input := getInputAsIntArray("1")
 
 	fmt.Println("Difference: ", getNumberOfIncreases(input))
 }
 
-func partTwo() {
-	fmt.Println("Advent of Code 1 - Part Two")
+func solution1PartTwo() {
+	fmt.Println("Day 1 - Part Two")
 
-	input := getInput("1")
+	input := getInputAsIntArray("1")
 
 	var ranges []int
 
