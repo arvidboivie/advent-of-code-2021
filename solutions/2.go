@@ -24,7 +24,11 @@ func solution2PartOne() {
 }
 
 func solution2PartTwo() {
-	fmt.Println("Day 2 - Part Two not implemented")
+	fmt.Println("Day 2 - Part Two")
+
+	input := getInput("2")
+
+	fmt.Println(navigateAdvanced(input))
 }
 
 func navigate(input []string) int {
@@ -41,6 +45,28 @@ func navigate(input []string) int {
 			depthChange -= input.value
 		case "down":
 			depthChange += input.value
+		}
+	}
+
+	return forwardChange * depthChange
+}
+
+func navigateAdvanced(input []string) int {
+	convertedInput := convertInput(input)
+
+	forwardChange := 0
+	depthChange := 0
+	aim := 0
+
+	for _, input := range convertedInput {
+		switch input.direction {
+		case "forward":
+			forwardChange += input.value
+			depthChange += input.value * aim
+		case "up":
+			aim -= input.value
+		case "down":
+			aim += input.value
 		}
 	}
 
